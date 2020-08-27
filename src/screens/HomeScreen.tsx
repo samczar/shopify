@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import { View, Text, StyleSheet, Button } from 'react-native'
 
-export const HomeScreen = () => {
+import ProductList from '../components/ProductList'
+
+export const HomeScreen = ({ navigation }: any) => {
 	return (
 		<View style={styles.container}>
-			<Text>Home</Text>
+			<ProductList />
+			<Button onPress={() => navigation.navigate('Cart')} title="Cart" />
 		</View>
 	)
 }
@@ -18,11 +20,3 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 })
-
-const mapStateToProps = (state: any) => ({
-	state: null,
-})
-
-const mapDispatchToProps = {}
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen)

@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+
+import CartList from '../components/CartList'
 
 export const CartScreen = () => {
 	return (
 		<View style={styles.container}>
 			<Text>Cart</Text>
+			<CartList />
 		</View>
 	)
 }
@@ -19,12 +21,4 @@ const styles = StyleSheet.create({
 	},
 })
 
-const mapStateToProps = (state: any) => ({
-	state: null,
-})
-
-const mapDispatchToProps = {
-	return: null,
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CartScreen)
+export default CartScreen
