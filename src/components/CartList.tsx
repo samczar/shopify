@@ -38,7 +38,7 @@ const CartList = () => {
 								onPress={() => {
 									Dispatch(removeProductFromCart(item))
 								}}
-								title="Delete Item"
+								title="Remove"
 								color="#841584"
 								accessibilityLabel="Decrease Item"
 							/>
@@ -46,21 +46,20 @@ const CartList = () => {
 					)
 				}}
 			/>
+
+			<Text style={{ padding: 20, fontWeight: 'bold' }}>
+				Total Price in Cart: ${total}
+			</Text>
 		</View>
 	) : (
 		<View>
-			<Text>No Data</Text>
-		</View>
-	)
-
-	return (
-		<View>
-			{display}
-			<Text style={{ padding: 20, fontWeight: 'bold' }}>
-				Total Price in Cart: {total}
+			<Text style={{ padding: 20, fontWeight: 'bold', fontSize: 20 }}>
+				Add Product To Cart
 			</Text>
 		</View>
 	)
+
+	return <View>{display}</View>
 }
 
 export default CartList

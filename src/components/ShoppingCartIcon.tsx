@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import { AppState } from '../redux/store'
 import { totalItemInCart } from '../redux/selectors/selectedItem'
 
-export const ShoppingCartIcon = ({ navigation }: any) => {
+export const ShoppingCartIcon = () => {
 	const listProduct = useSelector((state: AppState) => totalItemInCart(state))
 
 	return (

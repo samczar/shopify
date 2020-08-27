@@ -1,12 +1,13 @@
 import React from 'react'
-import { View, Text, StyleSheet, Button } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 
-import ProductList from '../components/ProductList'
+import CartList from '../components/CartList'
 
-export const HomeScreen = ({ navigation }: any) => {
+export const CheckOutScreen = () => {
 	return (
 		<View style={styles.container}>
-			<ProductList />
+			<Text>Cart</Text>
+			<CartList />
 		</View>
 	)
 }
@@ -19,3 +20,5 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 })
+
+export default CheckOutScreen
