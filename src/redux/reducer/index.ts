@@ -51,6 +51,8 @@ const productReducer = (
 	}
 }
 
-export default combineReducers({
+const rootReducer = combineReducers({
 	products: productReducer,
 })
+
+export default rootReducer

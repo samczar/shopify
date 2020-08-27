@@ -8,7 +8,7 @@ const ProductComponent = ({ name, price, quantity }: Product) => {
 		<View style={{ padding: 20 }}>
 			<Text>
 				{name} - &#36;{convertPrice} {quantity ? ` (x ${quantity}) ` : null}{' '}
-				{quantity ? `$${convertPrice * quantity}` : null}
+				{quantity ? `$${(convertPrice * quantity).toFixed(2)}` : null}
 			</Text>
 		</View>
 	)

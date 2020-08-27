@@ -1,12 +1,14 @@
 import React from 'react'
-import { View, Text, StyleSheet, Button } from 'react-native'
+import { View, StyleSheet, Button } from 'react-native'
 
 import ProductList from '../components/ProductList'
 
-export const HomeScreen = ({ navigation }: any) => {
+export const HomeScreen = (props: any) => {
 	return (
 		<View style={styles.container}>
-			<ProductList />
+			<View style={styles.product}>
+				<ProductList {...props} />
+			</View>
 		</View>
 	)
 }
@@ -17,5 +19,8 @@ const styles = StyleSheet.create({
 		backgroundColor: '#fff',
 		alignItems: 'center',
 		justifyContent: 'center',
+	},
+	product: {
+		paddingTop: 30,
 	},
 })

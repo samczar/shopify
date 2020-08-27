@@ -17,7 +17,7 @@ const Stack = createStackNavigator()
 export default function App(props: any) {
 	return (
 		<Provider store={store}>
-			<PersistGate persistor={persiststore}>
+			<PersistGate loading={null} persistor={persiststore}>
 				<StatusBar />
 				<NavigationContainer>
 					<Stack.Navigator

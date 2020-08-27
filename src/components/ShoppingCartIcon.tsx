@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { View, Text, TouchableOpacity, Button } from 'react-native'
+import { View, Text } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 import { AppState } from '../redux/store'

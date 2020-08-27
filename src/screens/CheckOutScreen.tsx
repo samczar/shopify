@@ -6,7 +6,6 @@ import CartList from '../components/CartList'
 export const CheckOutScreen = () => {
 	return (
 		<View style={styles.container}>
-			<Text>Cart</Text>
 			<CartList />
 		</View>
 	)

@@ -37,6 +37,14 @@ const ProductList = ({ navigation }: any) => {
 					)
 				}}
 			/>
+			<View style={{ position: 'absolute', bottom: 200 }}>
+				<Button
+					onPress={() => navigation.navigate('Cart')}
+					title="Go To Cart"
+					color="#841584"
+					accessibilityLabel="Cart"
+				/>
+			</View>
 		</View>
 	)
 }
